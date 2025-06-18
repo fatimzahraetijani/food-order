@@ -1,0 +1,278 @@
+/* 
+    Author: Fatim Zahrae TIJANI
+    Theme: Food Order Website Admin - Vertical Sidebar
+    Version: 2.0
+*/
+
+/* Reset & Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Wrapper */
+.wrapper {
+    padding: 2%;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Text Utilities */
+.text-center {
+    text-align: center;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Table Styles */
+.tbl-full {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.tbl-30 {
+    width: 30%;
+}
+
+table th, table td {
+    padding: 1rem;
+    text-align: left;
+}
+
+table th {
+    background-color: #f1f2f6;
+    border-bottom: 2px solid #ddd;
+}
+
+table td {
+    border-bottom: 1px solid #eee;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary,
+.btn-danger {
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.btn-primary {
+    background-color: #1e90ff;
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #1b7edb;
+}
+
+.btn-secondary {
+    background-color: #7bed9f;
+    color: black;
+}
+.btn-secondary:hover {
+    background-color: #2ed573;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #ff6b6b;
+    color: white;
+}
+.btn-danger:hover {
+    background-color: #e84118;
+}
+
+/* Messages */
+.success {
+    color: #2ed573;
+    font-weight: 600;
+}
+.error {
+    color: #ff4757;
+    font-weight: 600;
+}
+
+/* Sidebar Menu - Vertical */
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+    padding-top: 2rem;
+    z-index: 1000;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 1rem 2rem;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #f58e49;
+    display: block;
+    transition: 0.3s;
+    border-radius: 6px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #fff0e6;
+    color: #ff4757;
+}
+
+/* Main content adjusted to sidebar */
+.main-content {
+    margin-left: 220px;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+/* Dashboard Cards */
+.col-4 {
+    width: 22%;
+    min-width: 180px;
+    background-color: white;
+    margin: 1%;
+    padding: 1.5rem;
+    float: left;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    background-color: #ff4757;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 3rem;
+    border-top: 3px solid #e84118;
+}
+
+/* Login Form */
+/* Login Page Styling */
+.login {
+    max-width: 400px;
+    margin: 10% auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.login h2 {
+    margin-bottom: 1.5rem;
+    font-size: 24px;
+    color: #f58e49;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    margin: 0.5rem 0 1rem 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.login input[type="text"]:focus,
+.login input[type="password"]:focus {
+    border-color: #f58e49;
+    outline: none;
+    box-shadow: 0 0 5px rgba(245, 142, 73, 0.3);
+}
+
+.login input[type="submit"] {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: #f58e49;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login input[type="submit"]:hover {
+    background-color: #ff6b35;
+}
+
+.login .error,
+.login .success {
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.login .error {
+    color: #ff4757;
+}
+
+.login .success {
+    color: #2ed573;
+}
+
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .col-4 {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+        padding: 1rem 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .sidebar ul li {
+        text-align: center;
+        padding: 0.8rem;
+    }
+
+    .col-4 {
+        width: 100%;
+    }
+}
